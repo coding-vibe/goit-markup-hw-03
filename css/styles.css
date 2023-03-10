@@ -1,0 +1,247 @@
+:root {
+  /* Color */
+  --primary-brand-color: #4d5ae5;
+  --pressed-state-color: #404bbf;
+  --title-text-color: #2e2f42;
+  --primary-text-color: #434455;
+  --accent-color: #e7e9fc;
+  --light-backgrounds-color: #f4f4fd;
+  --main-basic-color: #ffffff;
+  /* Font */
+  /* General */
+  --primary-font: Roboto;
+  --logo-font: Raleway;
+  --family-font: sans-serif;
+  --med-font: 500;
+  --bold-font: 700;
+  /* Size */
+  --main-title-font-size: 56px;
+  --section-title-font-size: 36px;
+  --sub-title-font-size: 20px;
+  --small-font-size: 12px;
+  /* Line height */
+  --main-title-line-height: 1.07;
+  --section-title-line-height: 1.11;
+  --sub-title-line-height: 1.2;
+  --primary-line-height: 1.5;
+  --small-line-height: 1.16;
+  /* Letter spacing */
+  --primary-letter-spacing: 0.02em;
+  --small-btn-letter-spacing: 0.04em;
+}
+
+/* GENERAL */
+
+body {
+  color: var(--primary-text-color);
+  background-color: var(--main-basic-color);
+
+  font-family: var(--primary-font), var(--family-font);
+  line-height: var(--primary-line-height);
+  letter-spacing: var(--primary-letter-spacing);
+}
+
+address {
+  font-style: normal;
+}
+
+.link,
+.active-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+/* Titles */
+
+.main-title {
+  font-weight: var(--bold-font);
+  font-size: var(--main-title-font-size);
+  line-height: var(--main-title-line-height);
+}
+
+.section-title {
+  color: var(--title-text-color);
+
+  font-weight: var(--bold-font);
+  font-size: var(--section-title-font-size);
+  line-height: var(--section-title-line-height);
+  text-align: center;
+}
+
+.sub-title {
+  color: var(--title-text-color);
+
+  font-weight: var(--med-font);
+  font-size: var(--sub-title-font-size);
+  line-height: var(--sub-title-line-height);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Buttons */
+
+.btn {
+  font-family: inherit;
+  font-weight: var(--med-font);
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: var(--small-btn-letter-spacing);
+
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: var(--primary-brand-color);
+  color: var(--main-basic-color);
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 16px 32px 16px 32px;
+}
+
+.btn.primary:hover,
+.btn.primary:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.btn.secondary {
+  background-color: var(--light-backgrounds-color);
+  color: var(--primary-brand-color);
+
+  padding: 12px 24px 12px 24px;
+}
+
+.btn.secondary:hover,
+.btn.secondary:focus {
+  background-color: var(--pressed-state-color);
+  color: var(--main-basic-color);
+}
+
+/* General Logo styles */
+
+.logo {
+  font-family: var(--logo-font), var(--family-font);
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.web-logo-part {
+  color: var(--primary-brand-color);
+}
+
+/* HEADER */
+
+/* Navigation */
+
+/* Logo */
+
+.header-logo {
+  color: var(--title-text-color);
+  line-height: 1.33;
+}
+
+/* Sections */
+
+.header-menu .link,
+.header-menu .active-link {
+  color: var(--title-text-color);
+
+  font-weight: var(--med-font);
+}
+
+.header-menu .link:hover,
+.header-menu .link:focus {
+  color: var(--pressed-state-color);
+}
+
+.header-menu .active-link {
+  color: var(--pressed-state-color);
+}
+
+/* Contacts */
+
+.header-contacts-mailto,
+.header-contacts-tel {
+  color: var(--primary-text-color);
+}
+
+.header-contacts-mailto:hover,
+.header-contacts-mailto:focus,
+.header-contacts-tel:hover,
+.header-contacts-tel:focus {
+  color: var(--pressed-state-color);
+}
+
+/* PAGE STUDIO*/
+
+/* Hero */
+
+.hero {
+  background-color: var(--title-text-color);
+  color: var(--main-basic-color);
+
+  text-align: center;
+}
+
+/* Our Features */
+
+/* Our Flow */
+
+/* Our Team */
+
+.team {
+  background-color: var(--light-backgrounds-color);
+}
+
+.team-card-content {
+  background-color: var(--main-basic-color);
+}
+
+/* PAGE PORTFOLIO*/
+
+/* Our Portrolio */
+
+/* Filters */
+
+.portfolio-filter {
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+}
+
+/* Portfolio */
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--title-text-color);
+}
+
+/* Logo */
+
+.footer-logo {
+  color: var(--light-backgrounds-color);
+
+  line-height: 1.17;
+}
+
+.footer-text {
+  color: var(--accent-color);
+}
