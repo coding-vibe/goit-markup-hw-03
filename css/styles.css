@@ -1,4 +1,13 @@
+/* ROOT */
+
 :root {
+  /* Позиціонування */
+  --row-img-gap: 24px;
+  --column-img-gap: 48px;
+
+  /* Border */
+  --btn-border-radius: 4px;
+
   /* Color */
   --primary-brand-color: #4d5ae5;
   --pressed-state-color: #404bbf;
@@ -7,30 +16,84 @@
   --accent-color: #e7e9fc;
   --light-backgrounds-color: #f4f4fd;
   --main-basic-color: #ffffff;
+
   /* Font */
-  /* General */
+
+  /* Family */
   --primary-font: Roboto;
   --logo-font: Raleway;
   --family-font: sans-serif;
+  /* Weight */
   --med-font: 500;
   --bold-font: 700;
   /* Size */
   --main-title-font-size: 56px;
   --section-title-font-size: 36px;
   --sub-title-font-size: 20px;
+  --logo-font-size: 18px;
   --small-font-size: 12px;
   /* Line height */
   --main-title-line-height: 1.07;
   --section-title-line-height: 1.11;
-  --sub-title-line-height: 1.2;
-  --primary-line-height: 1.5;
   --small-line-height: 1.16;
+  --footer-logo-line-height: 1.17;
+  --sub-title-line-height: 1.2;
+  --header-logo-line-height: 1.33;
+  --primary-line-height: 1.5;
   /* Letter spacing */
   --primary-letter-spacing: 0.02em;
+  --logo-letter-spacing: 0.03em;
   --small-btn-letter-spacing: 0.04em;
 }
 
-/* GENERAL */
+/* RESET */
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Чому при збільшенні і зменшенні екрана contacs випадають??? */
+.container {
+  width: 100%;
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+  outline: 1px solid red;
+}
+
+/* Перевірити чи потрібна тут дисплей властивість??? */
+.link,
+.active-link {
+  display: inline-block;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.list {
+  list-style: none;
+}
+
+/* Body */
 
 body {
   color: var(--primary-text-color);
@@ -41,29 +104,19 @@ body {
   letter-spacing: var(--primary-letter-spacing);
 }
 
-address {
-  font-style: normal;
-}
-
-.link,
-.active-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.list {
-  list-style: none;
-}
-
 /* Titles */
 
+/* h1 */
 .main-title {
   font-weight: var(--bold-font);
   font-size: var(--main-title-font-size);
   line-height: var(--main-title-line-height);
 }
 
+/* h2 */
 .section-title {
+  margin-bottom: 72px;
+
   color: var(--title-text-color);
 
   font-weight: var(--bold-font);
@@ -72,7 +125,10 @@ address {
   text-align: center;
 }
 
+/* h3 */
 .sub-title {
+  margin-bottom: 8px;
+
   color: var(--title-text-color);
 
   font-weight: var(--med-font);
@@ -97,39 +153,49 @@ address {
 /* Buttons */
 
 .btn {
+  display: inline-block;
+  border-radius: var(--btn-border-radius);
+  text-align: center;
+
   font-family: inherit;
   font-weight: var(--med-font);
   font-size: inherit;
   line-height: inherit;
   letter-spacing: var(--small-btn-letter-spacing);
-
   cursor: pointer;
 }
 
 .btn.primary {
+  border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  padding: 16px 32px 16px 32px;
+  min-width: 169px;
+
   background-color: var(--primary-brand-color);
   color: var(--main-basic-color);
-
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 16px 32px 16px 32px;
 }
 
-.btn.primary:hover,
-.btn.primary:focus {
+.btn.primary:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: var(--pressed-state-color);
 }
 
 .btn.secondary {
+  padding: 12px 24px 12px 24px;
+  /* Уточнити чому кнопки трохи не сходяться у розмірі??? */
+  min-width: 69px;
+  border: 1px solid var(--accent-color);
+
   background-color: var(--light-backgrounds-color);
   color: var(--primary-brand-color);
-
-  padding: 12px 24px 12px 24px;
 }
 
-.btn.secondary:hover,
-.btn.secondary:focus {
+.btn.secondary:is(:hover, :focus) {
+  border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
   background-color: var(--pressed-state-color);
   color: var(--main-basic-color);
 }
@@ -138,8 +204,8 @@ address {
 
 .logo {
   font-family: var(--logo-font), var(--family-font);
-  font-size: 18px;
-  letter-spacing: 0.03em;
+  font-size: var(--logo-font-size);
+  letter-spacing: var(--logo-letter-spacing);
   text-transform: uppercase;
 }
 
@@ -149,16 +215,33 @@ address {
 
 /* HEADER */
 
+.header > .container {
+  display: flex;
+}
+
 /* Navigation */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
 
 /* Logo */
 
 .header-logo {
+  margin-right: 76px;
+
   color: var(--title-text-color);
-  line-height: 1.33;
+  line-height: var(--logo-line-height);
 }
 
 /* Sections */
+
+.header-menu {
+  display: flex;
+  gap: 40px;
+}
 
 .header-menu .link,
 .header-menu .active-link {
@@ -167,8 +250,7 @@ address {
   font-weight: var(--med-font);
 }
 
-.header-menu .link:hover,
-.header-menu .link:focus {
+.header-menu .link:is(:hover, :focus) {
   color: var(--pressed-state-color);
 }
 
@@ -178,15 +260,20 @@ address {
 
 /* Contacts */
 
+/* Чому не працює margin-left:auto??? */
+
+.header-contacts {
+  display: flex;
+  gap: 40px;
+}
+
 .header-contacts-mailto,
 .header-contacts-tel {
   color: var(--primary-text-color);
 }
 
-.header-contacts-mailto:hover,
-.header-contacts-mailto:focus,
-.header-contacts-tel:hover,
-.header-contacts-tel:focus {
+.header-contacts-mailto:is(:hover, :focus),
+.header-contacts-tel:is(:hover, :focus) {
   color: var(--pressed-state-color);
 }
 
@@ -201,32 +288,72 @@ address {
   text-align: center;
 }
 
+.hero-title {
+  max-width: 496px;
+  margin: 0 auto 48px;
+}
+
 /* Our Features */
 
 /* Our Flow */
 
 /* Our Team */
 
-.team {
+.team > .container {
+  padding: 120px 156px;
   background-color: var(--light-backgrounds-color);
 }
 
-.team-card-content {
+.team-list {
+  display: flex;
+  gap: var(--row-img-gap);
+}
+
+.team-item {
+  width: calc((100% - 72px) / 4);
+
   background-color: var(--main-basic-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-item-wrap {
+  padding: 32px 16px;
+  text-align: center;
 }
 
 /* PAGE PORTFOLIO*/
 
+.portfolio > .container {
+}
+
 /* Our Portrolio */
+
+.portfolio-filters {
+  margin-bottom: 72px;
+}
 
 /* Filters */
 
-.portfolio-filter {
-  border: 1px solid #e7e9fc;
-  border-radius: 4px;
+/* Portfolio */
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--row-img-gap);
+  column-gap: var(--column-img-gap);
 }
 
-/* Portfolio */
+.portfolio-project-card {
+  background: var(--main-basic-color);
+  border: 1px solid var(--accent-color);
+  width: calc((100% - 72px) / 3);
+}
+
+.portfolio-card-content {
+  padding: 32px 16px;
+}
 
 /* FOOTER */
 
@@ -235,11 +362,11 @@ address {
 }
 
 /* Logo */
-
 .footer-logo {
   color: var(--light-backgrounds-color);
+  margin-bottom: 16px;
 
-  line-height: 1.17;
+  line-height: var(--footer-logo-line-height);
 }
 
 .footer-text {
