@@ -67,7 +67,7 @@ ul {
 img {
   display: block;
   width: 100%;
-  max-width: 100%;
+  /* max-width: 100%; */
   height: auto;
 }
 
@@ -83,8 +83,7 @@ address {
 }
 
 .section {
-  padding-top: var(--top-bottom-section-padding);
-  padding-bottom: var(--top-bottom-section-padding);
+  padding: var(--top-bottom-section-padding) 0;
 }
 
 .link,
@@ -157,7 +156,9 @@ body {
 /* Buttons */
 
 .btn {
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
+  margin: 0 auto;
   border-radius: var(--btn-border-radius);
   text-align: center;
 
@@ -283,7 +284,7 @@ body {
   color: var(--pressed-state-color);
 }
 
-.logo,
+.header-logo,
 .header-menu .link,
 .header-menu .active-link,
 .header-contacts-mailto,
@@ -299,14 +300,15 @@ body {
 
 .hero {
   background-color: var(--title-text-color);
-  color: var(--main-basic-color);
 
-  text-align: center;
   padding-top: 188px;
   padding-bottom: 188px;
 }
 
 .hero-title {
+  color: var(--main-basic-color);
+
+  text-align: center;
   max-width: 496px;
   margin: 0 auto 48px;
 }
@@ -315,7 +317,6 @@ body {
 
 .features-list {
   display: flex;
-  flex-wrap: wrap;
   column-gap: 24px;
 }
 
@@ -325,13 +326,12 @@ body {
 
 /* Our Flow */
 
-.flow > .container {
+.flow {
   padding-bottom: var(--top-bottom-section-padding);
 }
 
 .flow-list {
   display: flex;
-  flex-wrap: wrap;
   column-gap: 24px;
 }
 
@@ -341,7 +341,7 @@ body {
 
 /* Our Team */
 
-.team > .container {
+.team {
   background-color: var(--light-backgrounds-color);
 }
 
@@ -366,7 +366,7 @@ body {
 
 /* PAGE PORTFOLIO*/
 
-.portfolio > .container {
+.portfolio {
   padding-top: 96px;
   padding-bottom: var(--top-bottom-section-padding);
 }
@@ -406,25 +406,23 @@ body {
 
 /* FOOTER */
 
-.footer > .container {
+.footer {
   padding-top: 100px;
   padding-bottom: 100px;
 
   background-color: var(--title-text-color);
 }
 
-.footer-content {
-  max-width: 364px;
-}
-
 /* Logo */
 .footer-logo {
-  margin-bottom: 16px;
-
   color: var(--light-backgrounds-color);
+
   line-height: var(--footer-logo-line-height);
 }
 
 .footer-text {
+  width: 264px;
+  margin-top: 16px;
+
   color: var(--accent-color);
 }
