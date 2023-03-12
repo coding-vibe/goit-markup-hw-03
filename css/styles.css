@@ -67,7 +67,7 @@ ul {
 img {
   display: block;
   width: 100%;
-  /* max-width: 100%; */
+  max-width: 100%;
   height: auto;
 }
 
@@ -156,7 +156,6 @@ body {
 /* Buttons */
 
 .btn {
-  /* display: inline-block; */
   display: block;
   margin: 0 auto;
   border-radius: var(--btn-border-radius);
@@ -206,14 +205,7 @@ body {
   color: var(--main-basic-color);
 }
 
-/* General Logo styles */
-
-.logo {
-  font-family: var(--logo-font), var(--family-font);
-  font-size: var(--logo-font-size);
-  letter-spacing: var(--logo-letter-spacing);
-  text-transform: uppercase;
-}
+/* Logo */
 
 .web-logo-part {
   color: var(--primary-brand-color);
@@ -241,7 +233,11 @@ body {
 .header-logo {
   color: var(--title-text-color);
 
+  font-family: var(--logo-font), var(--family-font);
+  font-size: var(--logo-font-size);
+  letter-spacing: var(--logo-letter-spacing);
   line-height: var(--logo-line-height);
+  text-transform: uppercase;
 }
 
 /* Sections */
@@ -417,7 +413,11 @@ body {
 .footer-logo {
   color: var(--light-backgrounds-color);
 
+  font-family: var(--logo-font), var(--family-font);
+  font-size: var(--logo-font-size);
+  letter-spacing: var(--logo-letter-spacing);
   line-height: var(--footer-logo-line-height);
+  text-transform: uppercase;
 }
 
 .footer-text {
